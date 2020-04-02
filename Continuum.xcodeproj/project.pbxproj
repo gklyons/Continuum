@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D49B3F412435364300699834 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B3F402435364300699834 /* Post.swift */; };
 		D49B3F432435373800699834 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B3F422435373800699834 /* Comment.swift */; };
+		D49B3F452435996400699834 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B3F442435996400699834 /* PostController.swift */; };
+		D49B3F4724359A5500699834 /* PostError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49B3F4624359A5500699834 /* PostError.swift */; };
 		F7F99C392211F96400D13C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F99C382211F96400D13C4C /* AppDelegate.swift */; };
 		F7F99C3E2211F96400D13C4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F99C3C2211F96400D13C4C /* Main.storyboard */; };
 		F7F99C402211F96600D13C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7F99C3F2211F96600D13C4C /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		D49B3F402435364300699834 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D49B3F422435373800699834 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		D49B3F442435996400699834 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		D49B3F4624359A5500699834 /* PostError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostError.swift; sourceTree = "<group>"; };
 		F7F99C352211F96400D13C4C /* Continuum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Continuum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F99C382211F96400D13C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7F99C3D2211F96400D13C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +57,7 @@
 			children = (
 				D49B3F402435364300699834 /* Post.swift */,
 				D49B3F422435373800699834 /* Comment.swift */,
+				D49B3F4624359A5500699834 /* PostError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -75,6 +80,7 @@
 		D49B3F3D243535F000699834 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D49B3F442435996400699834 /* PostController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -194,7 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49B3F4724359A5500699834 /* PostError.swift in Sources */,
 				F7F99C392211F96400D13C4C /* AppDelegate.swift in Sources */,
+				D49B3F452435996400699834 /* PostController.swift in Sources */,
 				D49B3F432435373800699834 /* Comment.swift in Sources */,
 				D49B3F412435364300699834 /* Post.swift in Sources */,
 			);
