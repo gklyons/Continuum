@@ -84,6 +84,11 @@
                                         <constraint firstItem="HDL-2W-rEZ" firstAttribute="top" secondItem="PNH-8P-buS" secondAttribute="bottom" constant="15" id="oSS-YS-UOD"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="captionLabel" destination="OfX-tf-nbU" id="4fC-Ql-KQK"/>
+                                    <outlet property="commentCountLabel" destination="4Wu-bY-VoP" id="f2A-CJ-4zc"/>
+                                    <outlet property="postPhotoImageView" destination="PNH-8P-buS" id="Ucq-VT-ph8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -15,6 +15,7 @@ class Post {
     var timestamp: Date
     var caption: String
     var comments: [Comment]
+    var commentCount: Int
     let recordID: CKRecord.ID
     
     var photo: UIImage? {
@@ -27,11 +28,12 @@ class Post {
         }
     }
     
-    init(photo: UIImage?, caption: String, timestamp: Date = Date(), comments: [Comment] = [], recordID: CKRecord.ID = CKRecord.ID(recordName: UUID().uuidString)) {
+    init(photo: UIImage?, caption: String, timestamp: Date = Date(), comments: [Comment] = [], commentCount: Int = 0, recordID: CKRecord.ID = CKRecord.ID(recordName: UUID().uuidString)) {
         
         self.caption = caption
         self.timestamp = timestamp
         self.comments = comments
+        self.commentCount = commentCount
         self.recordID = recordID
         
         self.photo = photo ///Needs to be last since it is a computed property
