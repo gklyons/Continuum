@@ -15,6 +15,13 @@ class PostController {
     var posts: [Post] = []
     
     func addComment(text: String, post: Post, completion: @escaping(Result<Comment, PostError>) -> Void) {
-        let postReference = CKRecord.Reference(recordID: post.recordID, action: .none)
+        let comment = Comment(text: text, post: post)
+        post.comments.append(comment)
     }
-}
+    
+    func createPostWith(photo: UIImage, caption: String, completion: @escaping (Result<Post?, PostError>) -> Void) {
+        let post = Post(photo: photo, caption: caption)
+        self.posts.append(post)
+    }
+    
+}//End of Class
