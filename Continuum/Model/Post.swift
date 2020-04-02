@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class Post {
     
@@ -14,6 +15,7 @@ class Post {
     var timestamp: Date
     var caption: String
     var comments: [Comment]
+    let recordID: CKRecord.ID
     
     var photo: UIImage? {
         get {
@@ -25,13 +27,17 @@ class Post {
         }
     }
     
-    init(photo: UIImage?, timestamp: Date = Date(), caption: String, comments: [Comment] = []) {
-        self.timestamp = timestamp
+    init(photo: UIImage?, caption: String, timestamp: Date = Date(), comments: [Comment] = [], recordID: CKRecord.ID = CKRecord.ID(recordName: UUID().uuidString)) {
+        
         self.caption = caption
+        self.timestamp = timestamp
         self.comments = comments
-        self.photo = photo
+        self.recordID = recordID
+        
+        self.photo = photo ///Needs to be last since it is a computed property
     }
     
-}
+    
+}//End of Class
 
 

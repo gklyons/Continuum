@@ -6,7 +6,8 @@
 //  Copyright © 2020 trevorAdcock. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import CloudKit
 
 class PostController {
     
@@ -14,6 +15,6 @@ class PostController {
     var posts: [Post] = []
     
     func addComment(text: String, post: Post, completion: @escaping(Result<Comment, PostError>) -> Void) {
-        
+        let postReference = CKRecord.Reference(recordID: post.recordID, action: .none)
     }
 }
