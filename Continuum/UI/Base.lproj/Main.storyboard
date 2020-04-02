@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-209" y="71"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Posts-->
         <scene sceneID="KKV-hV-9dh">
             <objects>
                 <tableViewController id="62r-Lx-TpU" sceneMemberID="viewController">
@@ -34,12 +34,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="264" id="FJW-g5-oFO">
-                                <rect key="frame" x="0.0" y="28" width="375" height="264"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="405" id="FJW-g5-oFO" customClass="PostTableViewCell" customModule="Continuum" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="405"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FJW-g5-oFO" id="3tq-Q6-B8r">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="264"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="405"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PNH-8P-buS">
+                                            <rect key="frame" x="50" y="25" width="275" height="275"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="PNH-8P-buS" secondAttribute="height" multiplier="1:1" id="zog-Gc-hjd"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="HDL-2W-rEZ">
+                                            <rect key="frame" x="50" y="315" width="230" height="45"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Caption)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfX-tf-nbU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qIf-rs-jfL">
+                                                    <rect key="frame" x="0.0" y="24.5" width="230" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQp-mU-ogd">
+                                                            <rect key="frame" x="0.0" y="0.0" width="88" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Comment Count)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wu-bY-VoP">
+                                                            <rect key="frame" x="92" y="0.0" width="138" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="PNH-8P-buS" secondAttribute="trailing" constant="50" id="Y7b-KC-LbI"/>
+                                        <constraint firstItem="HDL-2W-rEZ" firstAttribute="leading" secondItem="3tq-Q6-B8r" secondAttribute="leading" constant="50" id="hbn-jJ-YmX"/>
+                                        <constraint firstItem="PNH-8P-buS" firstAttribute="top" secondItem="3tq-Q6-B8r" secondAttribute="top" constant="25" id="k0H-2R-pgT"/>
+                                        <constraint firstItem="PNH-8P-buS" firstAttribute="leading" secondItem="3tq-Q6-B8r" secondAttribute="leading" constant="50" id="nYJ-b6-0Yb"/>
+                                        <constraint firstItem="HDL-2W-rEZ" firstAttribute="top" secondItem="PNH-8P-buS" secondAttribute="bottom" constant="15" id="oSS-YS-UOD"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -48,7 +91,7 @@
                             <outlet property="delegate" destination="62r-Lx-TpU" id="qsJ-bR-oUd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="7Hd-fE-H6J"/>
+                    <navigationItem key="navigationItem" title="Posts" id="7Hd-fE-H6J"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3w-WH-VEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
